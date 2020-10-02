@@ -86,10 +86,12 @@ Ans :      without data:
                 
 Ques 8: Fetch even and odd record in table ?
 Ans :  -->   SELECT * FROM EMPLOYEE  WHERE id IN ( SELECT id FROM EMPLOYEE WHERE id%2 = 0 );     // even data
+        -->  SELECT * FROM EMPLOYEE  WHERE id IN(SELECT id FROM EMPLOYEE WHERE id%2 <> 0);        // odd data
 
 Ques 9: What is case study in DBMS?
 Ans: Patients having different kinds of ailments come to the hospital and get checkup done from the concerned doctors. ... 
     The aim of this case study is to design and develop a database for the hospital to maintain the records of various departments, rooms, and doctors in the hospital.
-    
-    
-        -->  SELECT * FROM EMPLOYEE  WHERE id IN(SELECT id FROM EMPLOYEE WHERE id%2 <> 0);        // odd data
+
+        
+Ques 10:  fetch last row in table ?
+Ans :- select *from getLastRecord ORDER BY id DESC LIMIT 1;
