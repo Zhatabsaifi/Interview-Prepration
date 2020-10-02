@@ -1,0 +1,77 @@
+Ques 1: What is DBMS ?
+Ans : Database Management System (DBMS) is a software for storing and retrieving users' data while considering appropriate security measures. It consists of a group of
+    programs which manipulate the database. The DBMS accepts the request for data from an application and instructs the operating system to provide the specific data. 
+    In large systems, a DBMS helps users and other third-party software to store and retrieve data.
+   
+   It can be used for:- 
+      Creation of a database.
+      Retrieval of information from the database.
+      Updating the database.
+      Managing a database.
+      
+      
+      
+Ques 2:   What us VIEW in dbms ?
+Ans : - Views in SQL are considered as a virtual table. A view also contains rows and columns.
+        To create the view, we can select the fields from one or more tables present in the database.
+        A view can either have specific rows based on certain condition or all the rows of a table.
+      
+      Syntax:
+          CREATE VIEW view_name AS SELECT column1, column2..... FROM table_name WHERE condition;
+          SELECT * FROM table ;
+          
+
+Que 3 :-what is  Normalization ?
+Ans :-  1) Normalization is the process of organizing the data in the database.
+        2) Normalization is used to minimize the redundancy from a relation or set of relations. It is also used to eliminate the undesirable characteristics
+          like Insertion, Update and Deletion Anomalies.
+        3) Normalization divides the larger table into the smaller table and links them using relationship.
+        4) The normal form is used to reduce redundancy from the database table.
+        
+        Normal Form	        Description
+   ---------------------------------------------------------------------------------------------------------------------------------------------
+          1NF	         |       A relation is in 1NF if it contains an atomic value.
+          2NF          |      	A relation will be in 2NF if it is in 1NF and all non-key attributes are fully functional dependent on the primary key.
+          3NF          |     	A relation will be in 3NF if it is in 2NF and no transition dependency exists.
+          4NF          |   	A relation will be in 4NF if it is in Boyce Codd normal form and has no multi-valued dependency.
+          5NF          |     	A relation is in 5NF if it is in 4NF and not contains any join dependency and joining should be lossless.
+          
+ 
+ 
+Ques 4: Deletion of duplicate row in table ?
+Ans :  1)  SELECT 
+                [FirstName], [LastName], [Country], COUNT(*) AS CNT 
+                FROM EMployee_table
+                GROUP BY [FirstName],  [LastName], [Country] 
+                HAVING COUNT(*) > 1;
+                
+        2)    SELECT *
+                FROM EMployee_table
+                WHERE ID NOT IN
+                (
+                    SELECT MAX(ID)
+                    FROM EMployee_table
+                    GROUP BY [FirstName], 
+                             [LastName], 
+                             [Country]
+                );
+                
+                
+Ques 5: copy all date 1 table into another table ?
+Ans :  INSERT INTO table2 SELECT * FROM table1 WHERE condition;
+
+Ques 6: What is a Stored Procedure?
+Ans :  A stored procedure is a prepared SQL code that you can save, so the code can be reused over and over again.
+      So if you have an SQL query that you write over and over again, save it as a stored procedure, and then just call it to execute it
+      
+      Stored Procedure Syntax:
+          CREATE PROCEDURE procedure_name  AS  sql_statement GO;
+          
+      Execute a Stored Procedure :
+          EXEC procedure_name ;
+          
+      Example  :
+          CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10) AS SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode GO;
+          EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';
+          
+     
