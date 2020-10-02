@@ -75,3 +75,21 @@ Ans :  A stored procedure is a prepared SQL code that you can save, so the code 
           EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';
           
      
+Ques 7 : Create duplicate table with or without data ?
+Ans :      without data:
+                CREATE TABLE new_table LIKE original_table;
+              
+           With data :
+                1) CREATE TABLE new_table LIKE original_table;                  // Creating an Empty Table
+                    INSERT INTO new_table SELECT * FROM original_table;      // Inserting Data into Table
+                2)  CREATE TABLE new_table SELECT * FROM original_table;   // simple cloning
+                
+Ques 8: Fetch even and odd record in table ?
+Ans :  -->   SELECT * FROM EMPLOYEE  WHERE id IN ( SELECT id FROM EMPLOYEE WHERE id%2 = 0 );     // even data
+
+Ques 9: What is case study in DBMS?
+Ans: Patients having different kinds of ailments come to the hospital and get checkup done from the concerned doctors. ... 
+    The aim of this case study is to design and develop a database for the hospital to maintain the records of various departments, rooms, and doctors in the hospital.
+    
+    
+        -->  SELECT * FROM EMPLOYEE  WHERE id IN(SELECT id FROM EMPLOYEE WHERE id%2 <> 0);        // odd data
