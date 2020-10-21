@@ -134,3 +134,13 @@ Ans :   1)  Many-to-Many cardinality (m:n)
         2)  Many-to-One cardinality (m:1)
         3)  One-to-Many cardinality (1:n)
         4)  One-to-One cardinality (1:1 )
+        
+        
+        
+Ques 17: What is trigger ?
+Ans :  A trigger is a stored procedure in database which automatically invokes whenever a special event in the database occurs.
+        For example, a trigger can be invoked when a row is inserted into a specified table or when certain table columns are being updated.
+        
+        Syntax: create trigger [trigger_name]  [before | after]   {insert | update | delete}  on [table_name]  [for each row]  [trigger_body] 
+        Example : create trigger stud_marks  before INSERT on Student for each row set Student.total = Student.subj1 + Student.subj2 + Student.subj3, 
+                                                                                                    Student.per = Student.total * 60 / 100;
