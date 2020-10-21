@@ -113,3 +113,11 @@ Ans : The HAVING Clause enables you to specify conditions that filter which grou
         The WHERE clause places conditions on the selected columns, whereas the HAVING clause places conditions on groups created by the GROUP BY clause.
         
         SELECT column1, column2 FROM table1, table2 WHERE [ conditions ] GROUP BY column1, column2 HAVING [ conditions ] ORDER BY column1, column2 .
+        
+Ques 14: find the 2nd highes and Nth highest salary ?
+Ans :   1)  SELECT MAX(salary) FROM Employee WHERE Salary NOT IN ( SELECT Max(Salary) FROM Employee);
+        2)  SELECT MAX(Salary) From Employee WHERE Salary < ( SELECT Max(Salary) FROM Employee);
+        3)  SELECT name, MAX(salary) AS salary FROM employee WHERE salary < (SELECT MAX(salary)  FROM employee);
+        4)  SELECT Id, Salary FROM Employee e WHERE 2=(SELECT COUNT(DISTINCT Salary) FROM Employee p WHERE e.Salary<=p.Salary)
+        5)  SELECT name, salary FROM employee A WHERE n-1 = (SELECT count(1)  FROM employee B  WHERE B.salary>A.salary)  
+
