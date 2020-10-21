@@ -95,3 +95,21 @@ Ans: Patients having different kinds of ailments come to the hospital and get ch
         
 Ques 10:  fetch last row in table ?
 Ans :- select *from getLastRecord ORDER BY id DESC LIMIT 1;
+
+Ques 11 : What is Group by Clause ?
+Ans : The SQL GROUP BY clause is used in collaboration with the SELECT statement to arrange identical data into groups. This GROUP BY clause follows the 
+        WHERE clause in a SELECT statement and precedes the ORDER BY clause.
+        
+        SELECT column1, column2FROM table_name WHERE [ conditions ] GROUP BY column1, column2 ORDER BY column1, column2.
+        
+Ques 12 : What is INDEX ? 
+Ans : The INDEX is used to create and retrieve data from the database very quickly. An Index can be created by using a single or group of columns in a table. 
+        When the index is created, it is assigned a ROWID for each row before it sorts out the data.
+        
+        CREATE INDEX index_name  ON table_name ( column1, column2.....);
+        
+Ques 13 : What is HAVING Clause ?
+Ans : The HAVING Clause enables you to specify conditions that filter which group results appear in the results.
+        The WHERE clause places conditions on the selected columns, whereas the HAVING clause places conditions on groups created by the GROUP BY clause.
+        
+        SELECT column1, column2 FROM table1, table2 WHERE [ conditions ] GROUP BY column1, column2 HAVING [ conditions ] ORDER BY column1, column2 .
