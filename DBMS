@@ -121,3 +121,16 @@ Ans :   1)  SELECT MAX(salary) FROM Employee WHERE Salary NOT IN ( SELECT Max(Sa
         4)  SELECT Id, Salary FROM Employee e WHERE 2=(SELECT COUNT(DISTINCT Salary) FROM Employee p WHERE e.Salary<=p.Salary)
         5)  SELECT name, salary FROM employee A WHERE n-1 = (SELECT count(1)  FROM employee B  WHERE B.salary>A.salary)  
 
+Ques 15: write a query to get date of next months last day.
+Ans :  1)   SELECT EOMONTH('02/04/2016')                -------->>  Returns  02/29/2016
+                EOMONTH() function returns the last day of the month
+                
+        2)  DATEADD(interval, number, date)       --> interval = year , month , day
+            example :- SELECT DATEADD(year, 1, '2017/08/25') AS DateAdd;
+            
+            
+Ques 16 : What is cardinality ?
+Ans :   1)  Many-to-Many cardinality (m:n)
+        2)  Many-to-One cardinality (m:1)
+        3)  One-to-Many cardinality (1:n)
+        4)  One-to-One cardinality (1:1 )
