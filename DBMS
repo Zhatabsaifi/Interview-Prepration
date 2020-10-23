@@ -94,7 +94,12 @@ Ans: Patients having different kinds of ailments come to the hospital and get ch
 
         
 Ques 10:  fetch last row in table ?
-Ans :- select *from getLastRecord ORDER BY id DESC LIMIT 1;
+Ans :- select * from getLastRecord ORDER BY id DESC LIMIT 1;
+
+        SELECT LAST (column_name) FROM table_name;      //   The last() function is used to return the last value of the specified column
+                    You should note that the last() function is only supported in MS Access
+                    
+         SELECT column_name FROM table_name  ORDER BY column_name DESC  LIMIT 1;  
 
 Ques 11 : What is Group by Clause ?
 Ans : The SQL GROUP BY clause is used in collaboration with the SELECT statement to arrange identical data into groups. This GROUP BY clause follows the 
