@@ -219,3 +219,16 @@ Ans :       1)   SELECT table1.column1,table1.column2,table2.column1,.... FROM t
                 
             3)  SQL These databases have fixed or static or predefined schema
                  NOSQL They have have dynamic schema.
+                 
+                 
+  Ques 24: What is Cluster ?
+  Ans : 1)  When the two or more records are stored in the same file, it is known as clusters. These files will have two or more tables in the same data block,
+               and key attributes which are used to map these tables together are stored only once.
+         2) This method reduces the cost of searching for various records in different files.
+         
+         Type :
+         1) INdexed Cluster : In indexed cluster, records are grouped based on the cluster key and stored together. 
+             Here, all the records are grouped based on the cluster key- DEP_ID and all the records are grouped.
+        2) Hash Clusters: It is similar to the indexed cluster. In hash cluster, instead of storing the records based on the cluster key,
+                            we generate the value of the hash key for the cluster key and store the records with the same hash key value.
+
