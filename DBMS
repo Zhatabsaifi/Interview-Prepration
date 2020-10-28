@@ -232,3 +232,9 @@ Ans :       1)   SELECT table1.column1,table1.column2,table2.column1,.... FROM t
         2) Hash Clusters: It is similar to the indexed cluster. In hash cluster, instead of storing the records based on the cluster key,
                             we generate the value of the hash key for the cluster key and store the records with the same hash key value.
 
+
+Ques 25 : advantage of truncate over delete
+Ans: The DELETE statement removes rows one at a time and inserts an entry in the transaction log for each removed row. On the other hand, 
+     the TRUNCATE TABLE statement deletes the data by deallocating the data pages used to store the table data and inserts only the page deallocations in the transaction logs.
+     
+     
