@@ -1,0 +1,3 @@
+Ques 1 : what’s the advantage of caching ?
+Ans : By redirecting significant parts of the read load from the backend database to the in-memory layer, caching can reduce the load on your database, and protect
+      it from slower performance under load, or even from crashing at times of spikes.
