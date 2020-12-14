@@ -6,4 +6,26 @@ ques 3 : Microservices and distributed system ?
 
 ques 4 : Difference between SQL and NoSQL ?
 
-ques 5 : 
+ques 5 : Difference between pointer and reference ?
+
+ques 6 : What is a transaction in DBMS ?
+
+ques 7 :  DB schema and cardinality ?
+
+ques 8: StringBuffer vs String vs StringBuilder ( String concatenation in java) ?
+
+ques 9: Exception handling in java ( throws vs throw, checked vs unchecked, exception propagation during inheritance, custom run-time exceptions) ?
+
+ques 10: Transactions in RDBMS ?
+
+ques 11: How to implement transactions in multi-threaded environment ?
+
+ques 12: Use of volatile in Java ?
+
+ques 13: Singleton Design Pattern (double locking mechanism vs Enum ) ?
+
+ques 14 : How does Garbage collection work in Java ?
+
+ques 15 : How does Garbage collection work in Java ?
+
+ques 16: What is weak reference in Java and how it is used ?
